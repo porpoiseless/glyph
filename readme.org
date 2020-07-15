@@ -1,0 +1,54 @@
+#+title: Designing Glyphs
+* Prface: O Time, Thy Pyramids!
+/Insert nostalgic crap about internet archaeology. Many are the pages
+lost to bitrot and the vicissitudes of domain registrars, few are
+those preserved by the internet archive. And Angelus Novus weeps at
+the remains of this colossal wreck./
+
+So back in the day Gary Shannon of the conlang listserv had a silent,
+logographic conlang that was basically a bigger version of a 7-segment
+display. Unfortunately, that design (called "Neoglyphic") is gone, and
+the oldest references to it on the wayback machine refer to it a
+"lost" precursor to some (now ancient) projects.
+
+Resources:
+- [[https://web.archive.org/web/20081121115627/http://www.fiziwig.com/glyph/glyphs.html][Glyph Design]]
+- [[https://web.archive.org/web/20080312122326/http://www.fiziwig.com/glyph/piktok.html][Piktok]]
+
+* Glyph formula
+- Let there be a grid of points /i×j/.
+- The space between each index in /i/ is a column, and that between each
+  index in /j/ is a row.
+- A segment may connect any point /i[m]×j[n]/ to any of its <=4 adjacent
+  points.
+
+#+caption: Grid of segments for making glyphs
+#+name: Glyph Grid
+[[file:glyph-grid.svg][file:~/Projects/glyph/glyph-grid.svg]]
+
+- Each segment may be on or off: therefore there are 2^(/i×j/) possible
+  ways of filling in the grid.
+- For keming reasons, we must restrict this space to only glyphs
+  filling the entire grid.
+- Each row and each column must have at least one stroke passing
+  through it.
+- Every column in /i/ has /j/ possible segments, and every row in /j/ has /i/
+  possible segments.
+
+#+caption: Minimal segments required for glyphs
+#+name: Grid combinations
+[[file:glyph-combos.svg][file:~/Projects/glyph/glyph-combos.svg]]
+
+- Every column and every row must have at least one segment.
+
+#+caption: An illustration of a valid glyph
+#+name: Example glyph
+[[file:glyph-example.svg][file:~/Projects/glyph/glyph-example.svg]]
+
+Am I correct in thinking the following:
+
+- There are /j/ rows in /i/, each requiring one or more strokes to be on.
+- Similarly there are /i/ columns in /j/, each requiring one or more
+  strokes to be on.
+- Therefore the number of valid glyphs in a grid is expressed by the
+  following formula: =i×2^(j-1)+j×2^(i-1)=
