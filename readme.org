@@ -1,9 +1,9 @@
 #+title: Designing Glyphs
-* Prface: O Time, Thy Pyramids!
-/Insert nostalgic crap about internet archaeology. Many are the pages
+* Preface: O Time, Thy Pyramids!
+Insert nostalgic crap about internet archaeology. Many are the pages
 lost to bitrot and the vicissitudes of domain registrars, few are
 those preserved by the internet archive. And Angelus Novus weeps at
-the remains of this colossal wreck./
+the remains of this colossal wreck.
 
 So back in the day Gary Shannon of the conlang listserv had a silent,
 logographic conlang that was basically a bigger version of a 7-segment
@@ -24,7 +24,7 @@ Resources:
 
 #+caption: Grid of segments for making glyphs
 #+name: Glyph Grid
-[[file:glyph-grid.svg][file:~/Projects/glyph/glyph-grid.svg]]
+[[file:glyph-grid.svg]]
 
 - Each segment may be on or off: therefore there are 2^(/i×j/) possible
   ways of filling in the grid.
@@ -37,13 +37,13 @@ Resources:
 
 #+caption: Minimal segments required for glyphs
 #+name: Grid combinations
-[[file:glyph-combos.svg][file:~/Projects/glyph/glyph-combos.svg]]
+[[file:glyph-combos.svg]]
 
 - Every column and every row must have at least one segment.
 
 #+caption: An illustration of a valid glyph
 #+name: Example glyph
-[[file:glyph-example.svg][file:~/Projects/glyph/glyph-example.svg]]
+[[file:glyph-example.svg]]
 
 Am I correct in thinking the following:
 
