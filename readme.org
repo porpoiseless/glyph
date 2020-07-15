@@ -52,3 +52,16 @@ Am I correct in thinking the following:
   strokes to be on.
 - Therefore the number of valid glyphs in a grid is expressed by the
   following formula: =i×2^(j-1)+j×2^(i-1)=
+
+Is that right?
+
+- for each column in /i/, at least one of either /j/ vertical strokes or /j+1/ horizontal strokes must be filled.
+[[file:glyph-permutations-column.svg]]
+- for each row in /j/, at least one of either /i/ horizontal strokes or /i+1/ vertical strokes must be filled.
+[[file:glyph-permutations-row.svg]]
+- for each column i we must therefore choose one or more of j+j+1=2j+1 possible strokes.
+- since at least one of these strokes must be present, there are 2^(2j) ways of filling in any column.
+- and likewise 2^(2i) ways of filling in any row.
+
+every column AND every row must be represented, meaning there are
+2^(2j)×2^(2i)=2^(2i+2j)=4^i+j valid ways of filling a grid?
